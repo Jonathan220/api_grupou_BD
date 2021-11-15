@@ -2,7 +2,7 @@
   "name": "api_grupou",
   "version": "1.0.0",
   "description": "Trabalho de APS e AV2 da disciplina desenvolvimento de aplicações de banco de dados",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/Jonathan220/api_grupou_BD/issues"
   },
-  "homepage": "https://github.com/Jonathan220/api_grupou_BD#readme"
+  "homepage": "https://github.com/Jonathan220/api_grupou_BD#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.9.0"
+  }
 }
