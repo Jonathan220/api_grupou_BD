@@ -1,0 +1,19 @@
+{
+  "name": "api_grupou",
+  "version": "1.0.0",
+  "description": "Trabalho de APS e AV2 da disciplina desenvolvimento de aplicações de banco de dados",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jonathan220/api_grupou_BD.git"
+  },
+  "author": "Jonathan Abreu Pereira Silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jonathan220/api_grupou_BD/issues"
+  },
+  "homepage": "https://github.com/Jonathan220/api_grupou_BD#readme"
+}
