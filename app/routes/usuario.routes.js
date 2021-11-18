@@ -8,8 +8,8 @@ module.exports = (() => {
     });
   });
 
-  router.get("/:id", (req, res) => {
-    const usuario = usuarioController.show(req.params.id);
+  router.get("/:id", async (req, res) => {
+    const usuario = await usuarioController.show(req.params.id);
     res.json(usuario);
   });
 

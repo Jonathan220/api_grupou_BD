@@ -4,10 +4,14 @@ const bodyParser = require("body-parser");
 const app = express();
 const db = require("./app/db/models");
 
-db.sequelize.sync();
+// db.sequelize.sync();
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+db.sequelize.sync({ force: true });
+
+//body parse está deprecado
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 require("./app/routes")(app);
 
