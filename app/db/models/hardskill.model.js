@@ -21,4 +21,15 @@ const Hardskill = sequelize.define(
   { sequelize, tableName: name, timestamps: false }
 );
 
+Hardskill.associate = (models) => {
+  Hardskill.belongsToMany(models.aluno, {
+    through: "aluno_hardskill",
+    timestamps: false,
+    foreignKey: {
+      name: "id_hardskill",
+    },
+    as: "alunos",
+  });
+};
+
 module.exports = Hardskill;

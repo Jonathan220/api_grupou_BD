@@ -6,7 +6,7 @@ const db = require("./app/db/models");
 
 // db.sequelize.sync();
 
-db.sequelize.sync({ force: true });
+// db.sequelize.sync({ force: true });
 
 //body parse está deprecado
 

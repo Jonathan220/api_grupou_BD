@@ -34,4 +34,19 @@ const Usuario = sequelize.define(
   { sequelize, tableName: name }
 );
 
+Usuario.associate = (models) => {
+  Usuario.hasOne(models.aluno, {
+    foreignKey: {
+      name: "id_usuario",
+    },
+    as: "aluno",
+  });
+  Usuario.hasMany(models.questao, {
+    foreignKey: {
+      name: "id_usuario",
+    },
+    as: "questoes",
+  });
+};
+
 module.exports = Usuario;

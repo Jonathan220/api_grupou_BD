@@ -21,4 +21,13 @@ const Questao = sequelize.define(
   { sequelize, tableName: name, timestamps: false }
 );
 
+Questao.associate = (models) => {
+  Questao.belongsTo(models.usuario, {
+    foreignKey: {
+      name: "id_usuario",
+    },
+    as: "usuario",
+  });
+};
+
 module.exports = Questao;
