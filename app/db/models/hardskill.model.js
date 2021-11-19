@@ -18,7 +18,7 @@ const Hardskill = sequelize.define(
       field: "Atualizado_em",
     },
   },
-  { sequelize, tableName: name, timestamps: false }
+  { sequelize, tableName: name }
 );
 
 Hardskill.associate = (models) => {

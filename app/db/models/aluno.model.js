@@ -11,7 +11,7 @@ const Aluno = sequelize.define(
       type: DataTypes.STRING(10),
     },
   },
-  { sequelize, tableName: name, timestamps: false }
+  { sequelize, tableName: name }
 );
 
 Aluno.associate = (models) => {
