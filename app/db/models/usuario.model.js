@@ -1,6 +1,5 @@
 const { DataTypes } = require("sequelize");
 const name = require("path").basename(__filename.replace(".model", ""), ".js");
-
 const sequelize = require("../index").getConnection();
 
 const Usuario = sequelize.define(
@@ -46,6 +45,12 @@ Usuario.associate = (models) => {
       name: "id_usuario",
     },
     as: "questoes",
+  });
+  Usuario.hasOne(models.professor, {
+    foreignKey: {
+      name: "id_usuario",
+    },
+    as: "professor",
   });
 };
 
