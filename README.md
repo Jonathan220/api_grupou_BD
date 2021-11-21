@@ -79,4 +79,4 @@ Para testar as rotas faça uso do programa insomnia ou postman
 
 ### Modelo do banco de dados
 
-<img src='ERDDiagram1'>
+<img src="ERDDiagram1" alt="Diagrama entidade relacionamento">
