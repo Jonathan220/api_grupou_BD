@@ -1,12 +1,12 @@
 const models = require("../db/models");
 
 exports.index = async () => {
-  const resultado = await models.curso.findAll();
+  const resultado = await models.curso.findAll({ include: ["turmas"] });
   return resultado;
 };
 
 exports.show = async (id) => {
-  const resultado = await models.curso.findByPk(id);
+  const resultado = await models.curso.findByPk(id, { include: ["turmas"] });
   return resultado;
 };
 

@@ -1,12 +1,16 @@
 const models = require("../db/models");
 
 exports.index = async () => {
-  const resultado = await models.professor.findAll();
+  const resultado = await models.professor.findAll({
+    include: ["disciplina", "turmas"],
+  });
   return resultado;
 };
 
 exports.show = async (id) => {
-  const resultado = await models.professor.findByPk(id);
+  const resultado = await models.professor.findByPk(id, {
+    include: ["disciplina", "turmas"],
+  });
   return resultado;
 };
 

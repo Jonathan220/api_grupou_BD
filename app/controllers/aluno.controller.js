@@ -1,12 +1,30 @@
 const models = require("../db/models");
 
 exports.index = async () => {
-  const resultado = await models.aluno.findAll();
+  const resultado = await models.aluno.findAll({
+    include: [
+      "curso",
+      "hardskills",
+      "softskills",
+      "grupos",
+      "turmas",
+      "tarefas",
+    ],
+  });
   return resultado;
 };
 
 exports.show = async (id) => {
-  const resultado = await models.aluno.findByPk(id);
+  const resultado = await models.aluno.findByPk(id, {
+    include: [
+      "curso",
+      "hardskills",
+      "softskills",
+      "grupos",
+      "turmas",
+      "tarefas",
+    ],
+  });
   return resultado;
 };
 
