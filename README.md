@@ -23,7 +23,7 @@ API de acesso a um banco de dados mySQL
 No terminal do seu computador clone o projeto:
 
 ```
-git clone git@github.com:Jonathan220/api-pokemon.git
+git clone git@github.com:Jonathan220/api_grupou_BD.git
 ```
 
 Entre na pasta do projeto
